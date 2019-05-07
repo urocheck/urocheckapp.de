@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="no-js" lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}urocheck{% endblock title %}</title>
+    <meta name="description" content="urocheck App">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ get_url(path='main.css', cachebust=true) }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='apple-touch-icon.png', cachebust=true) }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='favicon-32x32.png', cachebust=true) }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='favicon-16x16.png', cachebust=true) }}">
+    <link rel="manifest" href="{{ get_url(path='site.webmanifest', cachebust=true) }}">
+    <link rel="mask-icon" href="{{ get_url(path='safari-pinned-tab.svg', cachebust=true) }}" color="#3f51b5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#3f51b5">
+</head>
+
+<body class="bg-gray">
+    <header class="navbar">
+        <section class="navbar-section">
+            <a class="logo" href="/">
+                <img src="{{ get_url(path='logo.png', cachebust=true) }}" alt="urocheck">
+                <span class="navbar-brand">urocheck</span>
+            </a>
+        </section>
+    </header>
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+    <footer class="text-center">
+        <a href="{{ get_url(path='./impressum/index.md') }}">Impressum</a> › <a
+            href="{{ get_url(path='./datenschutz/index.md') }}">Datenschutz</a> › <a
+            href="{{ get_url(path='./datenschutz-app/index.md') }}">Datenschutz App</a> › <a
+            href="mailto:support@urocheckapp.de">Kontakt</a>
+    </footer>
+</body>
+
+</html>
